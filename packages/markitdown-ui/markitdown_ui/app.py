@@ -5,7 +5,7 @@ from markitdown import MarkItDown
 import tempfile
 import os
 
-st.set_page_config(page_title="Markdowin UI", page_icon="📝", layout="wide")
+st.set_page_config(page_title="Markdowin UI", layout="wide")
 
 
 # Inicializar conversor (habilitar plugins por si los requiere)
