@@ -11,7 +11,16 @@ st.set_page_config(page_title="MarkItDown UI", page_icon="📝", layout="wide")
 # Inicializar conversor (habilitar plugins por si los requiere)
 @st.cache_resource
 def get_markitdown():
-    return MarkItDown()
+    import requests
+
+    session = requests.Session()
+    session.headers.update(
+        {
+            "Accept": "text/markdown, text/html;q=0.9, text/plain;q=0.8, */*;q=0.1",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        }
+    )
+    return MarkItDown(requests_session=session)
 
 
 md = get_markitdown()
