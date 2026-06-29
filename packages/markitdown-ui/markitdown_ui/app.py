@@ -5,7 +5,7 @@ from markitdown import MarkItDown
 import tempfile
 import os
 
-st.set_page_config(page_title="MarkItDown UI", page_icon="📝", layout="wide")
+st.set_page_config(page_title="Markdowin UI", page_icon="📝", layout="wide")
 
 
 # Inicializar conversor (habilitar plugins por si los requiere)
@@ -25,7 +25,7 @@ def get_markitdown():
 
 md = get_markitdown()
 
-st.title("📝 MarkItDown UI")
+st.title("📝 Markdowin UI")
 st.markdown("Convierte fácilmente cualquier documento, imagen o URL a Markdown.")
 
 # Layout principal
