@@ -112,7 +112,8 @@ class MarkItDown:
             # e.g., https://blog.cloudflare.com/markdown-for-agents/
             self._requests_session.headers.update(
                 {
-                    "Accept": "text/markdown, text/html;q=0.9, text/plain;q=0.8, */*;q=0.1"
+                    "Accept": "text/markdown, text/html;q=0.9, text/plain;q=0.8, */*;q=0.1",
+                    "User-Agent": "MarkItDown/1.0 (https://github.com/microsoft/markitdown) python-requests",
                 }
             )
         else:
